@@ -1,18 +1,21 @@
-import React from 'react'
-import Card from '../components/Card'
-import { Footer } from '../layouts/Footer'
-import Navbar from '../layouts/Navbar'
-import Sidebar from '../layouts/Sidebar'
+import "../App.css";
+import React from "react";
+import { Add, Search } from "../components";
+import {Card, Footer, Navbar} from '../layouts'
 
 const Home = () => {
   return (
-    <>
-        <Navbar/>
-        <Card/>
-        <Sidebar/>
-        <Footer/>
-    </>
-  )
-}
+      <div class="layout">
+        <Navbar />
+        <Card />
+        <aside class="lateral">
+          <Add />
+          <Search />
+        </aside>
+        <Footer />
+      </div>
 
-export default Home
+  );
+};
+
+export default Home;
