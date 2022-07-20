@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
   <>
-    <footer classNameName='footer'>
+    <footer className='footer'>
     &copy; Máster en React - <a href="http://danielcvdesign.surge.sh">DanielDubon</a>
     </footer>
   </>

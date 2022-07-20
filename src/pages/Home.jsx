@@ -5,10 +5,10 @@ import {Card, Footer, Navbar} from '../layouts'
 
 const Home = () => {
   return (
-      <div class="layout">
+      <div className="layout">
         <Navbar />
         <Card />
-        <aside class="lateral">
+        <aside className="lateral">
           <Add />
           <Search />
         </aside>
