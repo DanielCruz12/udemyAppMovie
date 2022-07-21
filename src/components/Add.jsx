@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { saveAtLocalStorage } from "../helpers";
 
 const Add = () => {
+  
   const [movieState, setMovie] = useState({
     id: 0,
     title: "",
@@ -27,6 +28,7 @@ const Add = () => {
     setMovie(movie);
 
     saveAtLocalStorage("movies", movie);
+
   };
 
 
