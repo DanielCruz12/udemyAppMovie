@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { saveAtLocalStorage } from "../helpers";
 
 const Add = () => {
   const [movieState, setMovie] = useState({
+    id: 0,
     title: "",
     description: "",
   });
@@ -23,26 +25,19 @@ const Add = () => {
       description,
     };
     setMovie(movie);
-    console.log(movie)
 
-    saveAtLocalStorage(movie);
+    saveAtLocalStorage("movies", movie);
   };
-  
-  
-  /* save at localStorage */
-  const saveAtLocalStorage = (movie) => {
-    localStorage.setItem('movie', JSON.stringify([movie]))
-    
-  }
+
 
   const titleComponent = "añadir titulo";
+  
   return (
-    
     <div className="add">
       <h3 className="title">{titleComponent}</h3>
 
       {(title &&
-        description ) &&
+        description) &&
         alert("la pelicula " + title + " fue añadida correctamente.")}
       <form onSubmit={getDataForm}>
         <input type="text" id="title" name="title" placeholder="Titulo" />
@@ -50,7 +45,7 @@ const Add = () => {
         <input type="submit" id="save" value="Guardar" />
       </form>
     </div>
-      
+
   );
 };
 
